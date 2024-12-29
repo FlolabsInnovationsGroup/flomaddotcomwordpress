@@ -1,0 +1,31 @@
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+import Layout from "@/components/Layout";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+// Prevent FontAwesome from auto-adding its CSS.
+config.autoAddCss = false;
+
+// Dark Mode Toggle Helper
+import { useEffect } from "react";
+
+function useDarkMode() {
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+}
+
+export default function App({ Component, pageProps }: AppProps) {
+  // Initialize dark mode on app load
+  useDarkMode();
+
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
+}

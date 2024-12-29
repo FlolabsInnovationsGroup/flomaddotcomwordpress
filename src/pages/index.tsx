@@ -1,0 +1,472 @@
+import React, { useState } from "react";
+import Image from "next/image";
+import Layout from "../components/Layout";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+
+
+export default function Home() {
+  return (
+    <>
+{/* Flomad Video Section */}
+<section className="relative h-[60vh] overflow-hidden bg-black">
+  <video
+    className="w-full h-full object-cover z-10"
+    controls
+    aria-label="Flomad Labs Video"
+  >
+    <source src="/videos/flomadlabsvid.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* Overlay */}
+  <div className="absolute top-0 left-0 w-full h-full bg-black/60 flex flex-col items-center justify-center text-white p-4 pointer-events-none">
+    <h1 className="text-4xl font-bold mb-4 text-[#3AB6EC]">
+      Join the Flomad Labs Movement
+    </h1>
+    <p className="text-lg mb-4 text-center">
+      Get your AI dose of innovation and inspiration. Our newsletter is your
+      go-to source for staying in sync with the AI universe.
+    </p>
+    <form className="flex flex-col sm:flex-row gap-2 w-full max-w-lg">
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        className="flex-1 p-3 rounded-md border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-white"
+        required
+        aria-label="Enter your email"
+      />
+      <button
+        type="submit"
+        className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700"
+      >
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
+  {/* Hero Section */}
+  <section
+    id="home"
+    className="flex items-center justify-center h-screen bg-cover bg-center relative"
+    style={{ backgroundImage: "url('/images/futuristicbackground.png')" }}
+  >
+    <div className="absolute inset-0 bg-black/50"></div>
+    <div className="relative z-10 text-center max-w-3xl p-6 bg-white/90 dark:bg-black/90 rounded-lg shadow-lg">
+      <h2 className="text-4xl sm:text-5xl font-medium mb-4 text-[#3AB6EC] leading-snug">
+        Flomad Labs: Navigating the AI Revolution Together
+      </h2>
+      <p className="text-lg sm:text-xl mb-6 text-gray-800 dark:text-gray-200">
+        We are at the start of another productivity revolution – Generative AI. Unlock the
+        infinite potential of Artificial Intelligence.
+      </p>
+      <a
+        href="#about"
+        className="inline-block bg-[#3AB6EC] text-white py-3 px-6 rounded-md hover:bg-blue-600 transition-transform transform hover:scale-105"
+      >
+        Learn More
+      </a>
+    </div>
+  </section>
+      {/* Guardians of Tomorrow Section */}
+      <section id="guardians" className="p-8 bg-background text-foreground transition-colors duration-300">
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-4xl sm:text-5xl font-medium text-[#3AB6EC] mb-8">
+      Guardians of Tomorrow: How Flomad Labs Resurrects the Spirit of Talos
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
+      {/* Talos Image */}
+      <div>
+        <Image
+          src="/images/talos.png"
+          alt="Mythical Guardian Talos"
+          width={500}
+          height={500}
+          className="rounded-lg mx-auto shadow-lg"
+          priority
+        />
+      </div>
+
+      {/* Content */}
+      <div>
+        <p className="mb-6 leading-relaxed">
+          In ancient times, the island of Crete was watched over by a mighty
+          guardian: Talos, the first robot known to mythology. A towering figure
+          of bronze, Talos tirelessly patrolled the island, running its perimeter
+          three times a day to protect its people from invaders.
+        </p>
+        <p className="mb-6 leading-relaxed">
+          Thousands of years later, Flomad Labs carries on this spirit of ancient
+          innovation with modern technology. Just as Talos stood as a guardian
+          for Crete, Flomad's AI and robotics solutions stand guard over the
+          digital and physical landscapes of our modern world.
+        </p>
+        <p className="leading-relaxed">
+          Our flagship project, "Project CAIPO," is inspired by this ancient
+          guardian, blending the ideals of innovation and protection into
+          cutting-edge AI systems that empower humanity and transform industries.
+        </p>
+        <p className="leading-relaxed">
+          Together, we create a new era of technological guardianship, inspired by
+          mythology and powered by AI.
+        </p>
+        <a
+            href="https://caipo.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-transform transform hover:scale-105"
+          >
+            Learn More About CAIPO
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+<section
+  id="benefits"
+  className="p-8 bg-white dark:bg-black text-gray-800 dark:text-gray-200"
+  aria-labelledby="benefits-heading"
+>
+  <h2
+    id="benefits-heading"
+    className="text-3xl sm:text-4xl font-medium mb-6 text-center text-[#3AB6EC] leading-snug"
+  >
+    The Flomad Advantage
+  </h2>
+  <p className="text-center mb-8 text-lg max-w-2xl mx-auto">
+    Unlock the potential of AI with benefits tailored to individuals and organizations alike. Here's what we bring to the table:
+  </p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    {/* Benefit 1 */}
+    <div
+      className="bg-white dark:bg-black/90 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800"
+      role="article"
+      aria-labelledby="benefit-1-title"
+    >
+      <h3
+        id="benefit-1-title"
+        className="text-2xl font-semibold mb-4 text-[#3AB6EC] text-center"
+      >
+        Empowering Entrepreneurs
+      </h3>
+      <p className="text-gray-700 dark:text-gray-300 text-center">
+        Flomad Labs provides tools and strategies for solo entrepreneurs to
+        leverage AI effectively, driving growth and innovation independently.
+      </p>
+    </div>
+
+    {/* Benefit 2 */}
+    <div
+      className="bg-white dark:bg-black/90 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800"
+      role="article"
+      aria-labelledby="benefit-2-title"
+    >
+      <h3
+        id="benefit-2-title"
+        className="text-2xl font-semibold mb-4 text-[#3AB6EC] text-center"
+      >
+        Transforming Enterprises
+      </h3>
+      <p className="text-gray-700 dark:text-gray-300 text-center">
+        Large organizations achieve unprecedented efficiency with Flomad's AI-driven solutions, enhancing decision-making and optimizing operations.
+      </p>
+    </div>
+
+    {/* Benefit 3 */}
+    <div
+      className="bg-white dark:bg-black/90 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800"
+      role="article"
+      aria-labelledby="benefit-3-title"
+    >
+      <h3
+        id="benefit-3-title"
+        className="text-2xl font-semibold mb-4 text-[#3AB6EC] text-center"
+      >
+        Driving Research
+      </h3>
+      <p className="text-gray-700 dark:text-gray-300 text-center">
+        Our dedicated research initiatives push the boundaries of AI, uncovering
+        innovative solutions for today's most complex challenges.
+      </p>
+    </div>
+
+    {/* Benefit 4 */}
+    <div
+      className="bg-white dark:bg-black/90 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800"
+      role="article"
+      aria-labelledby="benefit-4-title"
+    >
+      <h3
+        id="benefit-4-title"
+        className="text-2xl font-semibold mb-4 text-[#3AB6EC] text-center"
+      >
+        Personalized Solutions
+      </h3>
+      <p className="text-gray-700 dark:text-gray-300 text-center">
+        Tailor-made AI strategies designed to align with your business objectives and ensure maximum impact.
+      </p>
+    </div>
+
+    {/* Benefit 5 */}
+    <div
+      className="bg-white dark:bg-black/90 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800"
+      role="article"
+      aria-labelledby="benefit-5-title"
+    >
+      <h3
+        id="benefit-5-title"
+        className="text-2xl font-semibold mb-4 text-[#3AB6EC] text-center"
+      >
+        Ethical AI Practices
+      </h3>
+      <p className="text-gray-700 dark:text-gray-300 text-center">
+        We prioritize responsible and ethical AI development to ensure fairness, transparency, and trust in all our solutions.
+      </p>
+    </div>
+
+    {/* Benefit 6 */}
+    <div
+      className="bg-white dark:bg-black/90 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800"
+      role="article"
+      aria-labelledby="benefit-6-title"
+    >
+      <h3
+        id="benefit-6-title"
+        className="text-2xl font-semibold mb-4 text-[#3AB6EC] text-center"
+      >
+        Continuous Support
+      </h3>
+      <p className="text-gray-700 dark:text-gray-300 text-center">
+        Flomad Labs offers ongoing guidance and support to help businesses adapt to the rapidly changing AI landscape.
+      </p>
+    </div>
+  </div>
+
+  {/* Call to Action */}
+  <div className="text-center mt-8">
+    <a
+      href="/services"
+      className="bg-[#3AB6EC] text-white py-3 px-6 rounded-md hover:bg-blue-500 transition-transform transform hover:scale-105"
+    >
+      Explore Our Services
+    </a>
+  </div>
+</section>
+{/* Collaborations Section */} 
+<section
+  id="collaborations"
+  className="p-8 bg-white dark:bg-black text-gray-800 dark:text-gray-200 transition-colors duration-300"
+  aria-labelledby="collaborations-heading"
+>
+  <h2
+    id="collaborations-heading"
+    className="text-3xl sm:text-4xl font-medium mb-6 text-center text-[#3AB6EC] leading-snug"
+  >
+    Collaborations
+  </h2>
+  <p className="text-center mb-8 text-lg max-w-3xl mx-auto">
+    We thrive on collaboration. Whether it's academic research, corporate
+    initiatives, or community-driven projects, we bring AI innovations to life.
+  </p>
+
+  <div className="bg-white dark:bg-black/90 p-6 rounded-lg border border-gray-200 dark:border-gray-800 transition-all duration-300">
+    <div className="flex flex-wrap justify-center items-center gap-8">
+      {/* Collaboration 1 */}
+      <div
+        className="group relative w-[350px] h-[250px] overflow-hidden rounded-lg shadow-lg bg-black/90"
+        role="article"
+        aria-labelledby="collaboration-1-title"
+      >
+        <div className="relative w-[350px] h-[250px]">
+          <Image
+            src="/images/onlinecollab.png"
+            alt="Online Collaboration"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <p id="collaboration-1-title" className="text-center text-white text-lg px-4">
+            Partner with Flomad Labs to bring cutting-edge AI solutions to life.
+          </p>
+        </div>
+      </div>
+
+      {/* Collaboration 2 */}
+      <div
+        className="group relative w-[350px] h-[250px] overflow-hidden rounded-lg shadow-lg bg-black/90"
+        role="article"
+        aria-labelledby="collaboration-2-title"
+      >
+        <Image
+          src="/images/aiadvantage.png"
+          alt="AI Collaboration"
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <p id="collaboration-2-title" className="text-center text-white text-lg px-4">
+            Join our community of innovators to lead the AI revolution together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section
+  id="contact"
+  className="p-8 bg-white dark:bg-black text-gray-800 dark:text-gray-200 transition-colors duration-300"
+  aria-labelledby="contact-heading"
+>
+  <h2
+    id="contact-heading"
+    className="text-3xl sm:text-4xl font-semibold text-center text-[#3AB6EC] mb-6"
+  >
+    Get in Touch
+  </h2>
+  <p className="text-lg text-gray-700 dark:text-gray-300 text-center mb-6">
+    Have a question or want to collaborate? Reach out to us directly or connect with us on LinkedIn!
+  </p>
+
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div className="flex flex-col justify-center items-start bg-white dark:bg-black/90 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800">
+      <h3 className="text-xl font-medium text-[#3AB6EC] mb-4">Contact Details</h3>
+      <p className="text-gray-700 dark:text-gray-300 mb-4">
+        <strong>Email:</strong>{" "}
+        <a href="mailto:John@flomadlabs.com" className="text-[#3AB6EC] hover:underline">
+          John@flomadlabs.com
+        </a>
+      </p>
+      <p className="text-gray-700 dark:text-gray-300 mb-4">
+        <strong>Phone:</strong>{" "}
+        <a href="tel:+15127201253" className="text-[#3AB6EC] hover:underline">
+          +1 512-720-1253
+        </a>
+      </p>
+      <p className="text-gray-700 dark:text-gray-300">Follow us on LinkedIn for updates and insights:</p>
+      <div className="mt-4">
+        <a
+          href="https://www.linkedin.com/company/flomad-labs-r-d"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#3AB6EC] hover:text-blue-500 text-2xl flex items-center"
+        >
+          <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <div className="bg-white dark:bg-black/90 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800">
+      <h3 className="text-xl font-medium text-[#3AB6EC] mb-4">Send Us a Message</h3>
+      <form action="#" method="POST" className="space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <input
+            type="text"
+            placeholder="First Name"
+            className="p-3 w-full bg-white dark:bg-black/90 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-800 rounded-md focus:ring-2 focus:ring-[#3AB6EC]"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            className="p-3 w-full bg-white dark:bg-black/90 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-800 rounded-md focus:ring-2 focus:ring-[#3AB6EC]"
+            required
+          />
+        </div>
+        <input
+          type="email"
+          placeholder="Your Email Address"
+          className="p-3 w-full bg-white dark:bg-black/90 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-800 rounded-md focus:ring-2 focus:ring-[#3AB6EC]"
+          required
+        />
+        <textarea
+          rows={5}
+          placeholder="Your Message"
+          className="p-3 w-full bg-white dark:bg-black/90 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-800 rounded-md focus:ring-2 focus:ring-[#3AB6EC]"
+          required
+        ></textarea>
+        <button
+          type="submit"
+          className="w-full py-3 bg-[#3AB6EC] text-white rounded-md hover:bg-blue-500 transition-transform transform hover:scale-105"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</section>   {/* John Section */}
+{/* John Section */}
+<section
+  id="john-hazlewood"
+  className="p-8 bg-background text-foreground transition-colors duration-300"
+  aria-labelledby="john-hazlewood-heading"
+>
+  <div className="max-w-4xl mx-auto text-center">
+    {/* Profile Image */}
+    <Image
+      src="/images/John-Hazlewood.jpg"
+      alt="John Hazlewood"
+      width={300}
+      height={300}
+      className="mx-auto mb-4 border-4 border-[#3AB6EC] shadow-lg"
+      priority
+    />
+
+    {/* Heading */}
+    <h3
+      id="john-hazlewood-heading"
+      className="text-3xl font-bold mb-2 text-[#3AB6EC]"
+    >
+      John Hazlewood
+    </h3>
+    <p className="text-gray-400 font-semibold mb-4">CEO & Founder</p>
+
+    {/* LinkedIn Link */}
+    <a
+      href="https://linkedin.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#3AB6EC] hover:text-blue-500 text-xl flex items-center justify-center gap-2 mb-6 transition-transform transform hover:scale-105"
+      aria-label="Visit John Hazlewood's LinkedIn profile"
+    >
+      <FontAwesomeIcon icon={faLinkedin} />
+      <span>LinkedIn</span>
+    </a>
+
+    {/* Biography */}
+    <div className="text-left text-gray-300 space-y-4">
+      <h4 className="text-2xl text-[#3AB6EC] mb-2">Early Achievements</h4>
+      <p>
+        Launched the first web-based flights reservation system in 1995. Founded
+        an online travel company and its low-cost development subsidiary in
+        Sofia, Bulgaria.
+      </p>
+
+      <h4 className="text-2xl text-[#3AB6EC] mb-2">Business Ventures</h4>
+      <p>
+        In 1998, started a Y2K Services and IT staffing initiative and grew the
+        company to more than 100 employees. Owned and operated several leisure
+        travel agencies, a sports agency representing professional athletes and
+        teams, a semi-pro soccer team, a lawn maintenance and landscaping
+        company, and an import-export business.
+      </p>
+
+      <h4 className="text-2xl text-[#3AB6EC] mb-2">Vision for Flomad Labs</h4>
+      <p>
+        John Hazlewood continues to innovate at the intersection of technology
+        and business, leading Flomad Labs toward a future powered by ethical AI
+        and groundbreaking innovation.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+</>
+  )
+};

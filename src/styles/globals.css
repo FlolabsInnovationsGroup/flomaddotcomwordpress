@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #1A1A1A;
+  --primary: #3AB6EC;
+  --secondary: #F3F4F6;
+  --accent: #2B6CB0;
+  --card-bg: #575859;
+  --nav-bg: #FFFFFF;
+}
+
+.dark {
+  /* Keep your existing dark mode colors */
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --primary: #3AB6EC;
+  --secondary: #9CA3AF;
+  --accent: #93C5FD;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Add a smooth transition for hover effects */
+a {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tailwind Typography Defaults */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--foreground);
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Additional Utilities */
+button {
+  font-family: inherit;
+  background-color: var(--primary);
+  color: var(--foreground);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--accent);
+  transform: scale(1.05);
+}
