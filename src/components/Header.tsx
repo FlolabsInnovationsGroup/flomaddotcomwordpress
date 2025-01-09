@@ -34,12 +34,12 @@ const Header = () => {
       <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
         <Link href="/" aria-label="Navigate to Home">
           <Image
-            src="/images/logo.png"
+            src="/images/flomadlogo.png"
             alt="Flomad Labs Logo"
-            width={120}
-            height={60}
+            width={60}
+            height={40}
             priority
-          />
+          />Flomad
         </Link>
 
         <ul className="hidden sm:flex gap-6">
@@ -51,11 +51,6 @@ const Header = () => {
           <li>
             <Link href="/about" className="hover:text-[#3AB6EC]">
               About
-            </Link>
-          </li>
-          <li>
-            <Link href="/understanding-ai" className="hover:text-[#3AB6EC]">
-              Understanding AI
             </Link>
           </li>
           <li>

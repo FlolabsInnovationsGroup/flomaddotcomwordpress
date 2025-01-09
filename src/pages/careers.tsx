@@ -1,36 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-const Careers = () => {
-  const jobPositions = [
-    "AI/AGI Research Intern",
-    "Business Development and Sales Intern (AI & Robotics)",
-    "Computer Vision Engineering Intern",
-    "Content Marketing Intern",
-    "Control Systems Engineering Intern",
-    "Digital Marketing Intern",
-    "EdTech and Innovation Intern",
-    "Embedded Systems Intern",
-    "Ethical and Legal Research Intern",
-    "Front-End Developer Intern",
-    "Human-Robot Interaction Intern",
-    "Machine Learning Engineering Intern",
-    "Marketing Intern",
-    "Marketing Intern (AI & Robotics)",
-    "Mechatronics Engineering Intern",
-    "Operations Intern",
-    "Product Development Intern (AI & Robotics)",
-    "Project Management Intern",
-    "Podcast Production Intern",
-    "Prompt Engineer Intern",
-    "Quality Assurance Intern",
-    "Robotics Engineering Intern",
-    "Sensor Integration Intern",
-    "Software Development Intern",
-    "Technical Writing Intern",
-    "UI/UX Design Intern",
-  ];
 
+const Careers = () => {
   return (
     <>
       <section
@@ -79,37 +51,19 @@ const Careers = () => {
         </div>
       </section>
 
-      <section
-        id="open-positions"
-        className="p-8 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
-        aria-labelledby="open-positions-heading"
-      >
+      <section className="p-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
         <div className="max-w-6xl mx-auto">
-          <h2
-            id="open-positions-heading"
-            className="text-3xl sm:text-4xl font-medium text-blue-600 dark:text-[#3AB6EC] mb-6 text-center"
-          >
-            Open Positions
+          <h2 className="text-3xl sm:text-4xl font-medium text-blue-600 dark:text-[#3AB6EC] mb-6">
+            Current Open Intern Roles
           </h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {jobPositions.map((job, index) => (
-              <li 
-                key={index} 
-                className="bg-gray-100 dark:bg-gray-900 p-4 rounded-lg shadow-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
-              >
-                <a
-                  href="#"
-                  className="text-lg text-blue-600 dark:text-[#3AB6EC] hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {job}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+          <p className="text-lg mb-4">
+            Please visit our <a href="https://flomad.international/internships-programs/" target="_blank" rel="noopener noreferrer">Flomad International</a> website to view our current open roles.
+          </p>
+          </div>
+          </section>
+
+
+
     </>
   );
 };

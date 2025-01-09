@@ -15,7 +15,7 @@ const Footer = () => {
       </h2>
 
       {/* Copyright */}
-      <p className="text-gray-400">Flomad Labs - Research & Development</p>
+      <p className="text-gray-400">A Flomad Labs Company</p>
 
       {/* Footer Navigation */}
       <ul className="flex justify-center gap-6 mt-4 footer-nav">
