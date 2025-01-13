@@ -114,7 +114,7 @@ export default function About() {
                 description: "Facilitating partnerships and global initiatives to foster innovation.",
               },
               {
-                src: "/images/caipo.png",
+                src: "/images/CAIPO.png",
                 alt: "CAIPO",
                 title: "CAIPO",
                 description:
