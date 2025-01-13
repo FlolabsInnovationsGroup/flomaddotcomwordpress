@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Layout from "../components/Layout";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 
 
 

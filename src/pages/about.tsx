@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../components/Layout";
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -95,26 +94,26 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                src: "/images/flomad-labs.jpg",
+                src: "/images/flomad-labs.png",
                 alt: "Flomad Labs",
                 title: "Flomad Labs",
                 description:
                   "Our hub for AI research and development, creating transformative solutions for modern challenges.",
               },
               {
-                src: "/images/flomad-travel.jpg",
+                src: "/images/flomad-travel.png",
                 alt: "Flomad Travel",
                 title: "Flomad Travel",
                 description: "Simplifying global exploration with advanced travel tools and services.",
               },
               {
-                src: "/images/flomad-international.jpg",
+                src: "/images/flomad-international.png",
                 alt: "Flomad International",
                 title: "Flomad International",
                 description: "Facilitating partnerships and global initiatives to foster innovation.",
               },
               {
-                src: "/images/caipo.jpg",
+                src: "/images/caipo.png",
                 alt: "CAIPO",
                 title: "CAIPO",
                 description:
