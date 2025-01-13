@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 
@@ -101,11 +101,11 @@ export default function Home() {
         <p className="mb-6 leading-relaxed">
           Thousands of years later, Flomad Labs carries on this spirit of ancient
           innovation with modern technology. Just as Talos stood as a guardian
-          for Crete, Flomad's AI and robotics solutions stand guard over the
+          for Crete, Flomad&#39;s AI and robotics solutions stand guard over the
           digital and physical landscapes of our modern world.
         </p>
         <p className="leading-relaxed">
-          Our flagship project, "Project CAIPO," is inspired by this ancient
+          Our flagship project, &quot;Project CAIPO,&quot; is inspired by this ancient
           guardian, blending the ideals of innovation and protection into
           cutting-edge AI systems that empower humanity and transform industries.
         </p>
@@ -138,7 +138,7 @@ export default function Home() {
     The Flomad Advantage
   </h2>
   <p className="text-center mb-8 text-lg max-w-2xl mx-auto">
-    Unlock the potential of AI with benefits tailored to individuals and organizations alike. Here's what we bring to the table:
+    Unlock the potential of AI with benefits tailored to individuals and organizations alike. Here&#39;s what we bring to the table:
   </p>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -173,7 +173,7 @@ export default function Home() {
         Transforming Enterprises
       </h3>
       <p className="text-gray-700 dark:text-gray-300 text-center">
-        Large organizations achieve unprecedented efficiency with Flomad's AI-driven solutions, enhancing decision-making and optimizing operations.
+        Large organizations achieve unprecedented efficiency with Flomad&#39;s AI-driven solutions, enhancing decision-making and optimizing operations.
       </p>
     </div>
 
@@ -191,7 +191,7 @@ export default function Home() {
       </h3>
       <p className="text-gray-700 dark:text-gray-300 text-center">
         Our dedicated research initiatives push the boundaries of AI, uncovering
-        innovative solutions for today's most complex challenges.
+        innovative solutions for today&#39;s most complex challenges.
       </p>
     </div>
 
@@ -249,12 +249,11 @@ export default function Home() {
 
   {/* Call to Action */}
   <div className="text-center mt-8">
-    <a
-      href="/services"
-      className="bg-[#3AB6EC] text-white py-3 px-6 rounded-md hover:bg-blue-500 transition-transform transform hover:scale-105"
-    >
-      Explore Our Services
-    </a>
+  <Link href="/services">
+  <a className="bg-[#3AB6EC] text-white py-3 px-6 rounded-md hover:bg-blue-500 transition-transform transform hover:scale-105">
+    Explore Our Services
+  </a>
+</Link>
   </div>
 </section>
 {/* Collaborations Section */} 
@@ -270,7 +269,7 @@ export default function Home() {
     Collaborations
   </h2>
   <p className="text-center mb-8 text-lg max-w-3xl mx-auto">
-    We thrive on collaboration. Whether it's academic research, corporate
+    We thrive on collaboration. Whether it&#39;s academic research, corporate
     initiatives, or community-driven projects, we bring AI innovations to life.
   </p>
 
