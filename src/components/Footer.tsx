@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -20,31 +21,31 @@ const Footer = () => {
       {/* Footer Navigation */}
       <ul className="flex justify-center gap-6 mt-4 footer-nav">
         <li>
-          <a
+          <Link
             href="/"
             className="text-[#3AB6EC] hover:underline transition-colors duration-300"
             aria-label="Navigate to Home"
           >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="/about"
             className="text-[#3AB6EC] hover:underline transition-colors duration-300"
             aria-label="About Us"
           >
             About Us
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="/contact"
             className="text-[#3AB6EC] hover:underline transition-colors duration-300"
             aria-label="Contact Us"
           >
             Contact Us
-          </a>
+          </Link>
         </li>
       </ul>
 
@@ -59,13 +60,13 @@ const Footer = () => {
         >
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
-        <a
+        <Link
           href="/contact"
           className="p-2 rounded-full bg-gray-800 text-[#3AB6EC] hover:bg-[#3AB6EC] hover:text-gray-900 transition-all duration-300"
           aria-label="Contact Us"
         >
           <FontAwesomeIcon icon={faEnvelope} />
-        </a>
+        </Link>
       </div>
 
       {/* Back to Top */}
@@ -81,5 +82,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-  

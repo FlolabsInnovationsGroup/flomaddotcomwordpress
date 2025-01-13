@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function About() {
   return (
@@ -146,23 +147,21 @@ export default function About() {
             At Flomad, we envision a world where technology and innovation drive sustainable growth, empower individuals, and connect communities.
           </p>
           <p className="text-lg">
-            Whether it's redefining travel, pioneering AI solutions, or fostering global partnerships, Flomad is dedicated to transforming industries and enhancing lives.
+            Whether it&#39;s redefining travel, pioneering AI solutions, or fostering global partnerships, Flomad is dedicated to transforming industries and enhancing lives.
           </p>
         </div>
       </section>
 
-      
       {/* John Section */}
       <section
         id="john-hazlewood"
         className="p-8 bg-background text-foreground transition-colors duration-300"
         aria-labelledby="john-hazlewood-heading"
       >
-                  <h2 className="text-4xl sm:text-5xl font-semibold text-center text-[#3AB6EC] mb-8">
-            Flomad's Founder
-          </h2>
+        <h2 className="text-4xl sm:text-5xl font-semibold text-center text-[#3AB6EC] mb-8">
+          Flomad&#39;s Founder
+        </h2>
         <div className="max-w-4xl mx-auto text-center">
-          {/* Profile Image */}
           <Image
             src="/images/John-Hazlewood.jpg"
             alt="John Hazlewood"
@@ -171,8 +170,6 @@ export default function About() {
             className="mx-auto mb-4 border-4 border-[#3AB6EC] shadow-lg"
             priority
           />
-      
-          {/* Heading */}
           <h3
             id="john-hazlewood-heading"
             className="text-3xl font-bold mb-2 text-[#3AB6EC]"
@@ -180,47 +177,24 @@ export default function About() {
             John Hazlewood
           </h3>
           <p className="text-gray-400 font-semibold mb-4">CEO & Founder</p>
-      
-          {/* LinkedIn Link */}
-          <a
+          <Link
             href="https://linkedin.com"
             target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#3AB6EC] hover:text-blue-500 text-xl flex items-center justify-center gap-2 mb-6 transition-transform transform hover:scale-105"
-            aria-label="Visit John Hazlewood's LinkedIn profile"
+            className="text-[#3AB6EC] hover:text-blue-500 text-xl flex items-center justify-center gap-2 mb-6"
+            aria-label="Visit John Hazlewood&#39;s LinkedIn profile"
           >
             <FontAwesomeIcon icon={faLinkedin} />
             <span>LinkedIn</span>
-          </a>
-      
-          {/* Biography */}
+          </Link>
           <div className="text-left text-gray-300 space-y-4">
             <h4 className="text-2xl text-[#3AB6EC] mb-2">Early Achievements</h4>
             <p>
-              Launched the first web-based flights reservation system in 1995. Founded
-              an online travel company and its low-cost development subsidiary in
-              Sofia, Bulgaria.
+              Launched the first web-based flights reservation system in 1995. Founded an online travel company and its low-cost development subsidiary in Sofia, Bulgaria.
             </p>
-      
             <h4 className="text-2xl text-[#3AB6EC] mb-2">Business Ventures</h4>
             <p>
-              In 1998, started a Y2K Services and IT staffing initiative and grew the
-              company to more than 100 employees. Owned and operated several leisure
-              travel agencies, a sports agency representing professional athletes and
-              teams, a semi-pro soccer team, a lawn maintenance and landscaping
-              company, and an import-export business.
+              In 1998, started a Y2K Services and IT staffing initiative and grew the company to more than 100 employees. Owned and operated several leisure travel agencies, a sports agency representing professional athletes and teams, a semi-pro soccer team, a lawn maintenance and landscaping company, and an import-export business.
             </p>
-      
             <h4 className="text-2xl text-[#3AB6EC] mb-2">Vision for Flomad Labs</h4>
             <p>
-              John Hazlewood continues to innovate at the intersection of technology
-              and business, leading Flomad Labs toward a future powered by ethical AI
-              and groundbreaking innovation.
-            </p>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-
+              John Hazlewood continues to innovate at the intersection of technology and business, leading Flomad Labs toward a future powered by ethical AI and groundbreaking innovation. </p> </div> </div> </section> </> ); }
