@@ -52,6 +52,7 @@ export default function About() {
                 title: "Innovation",
                 description: "Driving creative solutions to transform challenges into opportunities.",
                 icon: "brain",
+                alt: "Flomad Labs",
               },
               {
                 title: "Global Impact",
@@ -85,57 +86,58 @@ export default function About() {
 
       {/* Ecosystem of Flomad */}
       <section className="p-8 bg-white dark:bg-black text-gray-800 dark:text-gray-200 transition-colors duration-300">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-center text-[#3AB6EC] mb-8">
-            The Flomad Ecosystem
-          </h2>
-          <p className="text-lg text-center mb-6">
-            At Flomad, we operate as an interconnected network of innovative businesses and solutions:
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl sm:text-5xl font-semibold text-center text-[#3AB6EC] mb-8">
+      The Flomad Ecosystem
+    </h2>
+    <p className="text-lg text-center mb-6">
+      At Flomad, we operate as an interconnected network of innovative businesses and solutions:
+    </p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        {
+          title: "Flomad Labs",
+          description:
+            "Our hub for AI research and development, creating transformative solutions for modern challenges.",
+          link: "https://www.flomadlabs.com/",
+        },
+        {
+          title: "Flomad Travel",
+          description:
+            "Simplifying global exploration with advanced travel tools and services.",
+          link: "https://www.flomadtravel.com/",
+        },
+        {
+          title: "Flomad International",
+          description:
+            "Facilitating partnerships and global initiatives to foster innovation.",
+          link: "https://flomad.international/",
+        },
+        {
+          title: "CAIPO",
+          description:
+            "Our flagship AI platform, streamlining business processes and enhancing productivity.",
+          link: "https://www.caipo.ai/",
+        },
+      ].map((item, index) => (
+        <a
+          key={index}
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-center p-4 bg-white dark:bg-black/90 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800 hover:shadow-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
+          aria-label={`Visit ${item.title}`}
+        >
+          <h3 className="text-xl font-semibold text-[#3AB6EC]">{item.title}</h3>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mt-2">
+            {item.description}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                src: "/images/flomad-labs.png",
-                alt: "Flomad Labs",
-                title: "Flomad Labs",
-                description:
-                  "Our hub for AI research and development, creating transformative solutions for modern challenges.",
-              },
-              {
-                src: "/images/flomad-travel.png",
-                alt: "Flomad Travel",
-                title: "Flomad Travel",
-                description: "Simplifying global exploration with advanced travel tools and services.",
-              },
-              {
-                src: "/images/flomad-international.png",
-                alt: "Flomad International",
-                title: "Flomad International",
-                description: "Facilitating partnerships and global initiatives to foster innovation.",
-              },
-              {
-                src: "/images/CAIPO.png",
-                alt: "CAIPO",
-                title: "CAIPO",
-                description:
-                  "Our flagship AI platform, streamlining business processes and enhancing productivity.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={150}
-                  height={150}
-                  className="rounded-lg mb-4"
-                />
-                <h3 className="text-xl font-semibold text-[#3AB6EC]">{item.title}</h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300 mt-2">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Vision for the Future */}
       <section className="p-8 bg-white dark:bg-black text-gray-800 dark:text-gray-200 transition-colors duration-300">
