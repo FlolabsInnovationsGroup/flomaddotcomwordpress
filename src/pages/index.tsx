@@ -249,12 +249,12 @@ export default function Home() {
 
   {/* Call to Action */}
   <div className="text-center mt-8">
-  <Link href="/services">
-  <a className="bg-[#3AB6EC] text-white py-3 px-6 rounded-md hover:bg-blue-500 transition-transform transform hover:scale-105">
-    Explore Our Services
-  </a>
-</Link>
-  </div>
+  <Link href="/services" legacyBehavior>
+    <a className="bg-[#3AB6EC] text-white py-3 px-6 rounded-md hover:bg-blue-500 transition-transform transform hover:scale-105">
+      Explore Our Services
+    </a>
+  </Link>
+</div>
 </section>
 {/* Collaborations Section */} 
 <section
