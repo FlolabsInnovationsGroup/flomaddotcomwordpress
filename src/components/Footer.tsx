@@ -15,9 +15,6 @@ const Footer = () => {
         Flomad Labs Footer
       </h2>
 
-      {/* Copyright */}
-      <p className="text-gray-400">A Flomad Labs Company</p>
-
       {/* Footer Navigation */}
       <ul className="flex justify-center gap-6 mt-4 footer-nav">
         <li>
