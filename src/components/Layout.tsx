@@ -9,7 +9,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <Header />
 
       {/* Main Content */}
-      <main role="main" className="flex-1">
+      <main
+        role="main"
+        className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-6"
+        aria-label="Main Content"
+      >
         {children}
       </main>
 
@@ -20,4 +24,3 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 export default Layout;
-

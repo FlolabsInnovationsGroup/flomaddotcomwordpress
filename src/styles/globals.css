@@ -13,7 +13,6 @@
 }
 
 .dark {
-  /* Keep your existing dark mode colors */
   --background: #0a0a0a;
   --foreground: #ededed;
   --primary: #3AB6EC;
@@ -25,34 +24,66 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-
-
-/* Add a smooth transition for hover effects */
-a {
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Tailwind Typography Defaults */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
   color: var(--foreground);
+  margin-bottom: 1rem;
 }
 
 p {
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
-/* Additional Utilities */
+/* Tailwind Typography Plugin Prose Customization */
+.prose {
+  color: var(--foreground);
+  max-width: 65ch;
+  line-height: 1.8;
+}
+
+.prose h1, .prose h2 {
+  color: var(--primary);
+}
+
+.prose a {
+  color: var(--primary);
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.dark .prose {
+  color: var(--foreground);
+}
+
+.dark .prose a {
+  color: var(--accent);
+}
+
+/* Links */
+a {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+a:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Button Styles */
 button {
   font-family: inherit;
   background-color: var(--primary);
@@ -65,6 +96,71 @@ button {
 }
 
 button:hover {
-  background-color: var(--accent);
+  background: linear-gradient(to right, var(--primary), var(--accent));
   transform: scale(1.05);
+  color: var(--background);
+}
+
+button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Card Styles */
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03) rotate(1deg);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Mode Link Customization */
+.dark a {
+  color: var(--accent);
+}
+
+.dark a:hover {
+  color: var(--primary);
+}
+
+/* Utility Class for Gradient Backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+}
+
+/* Gradient Border Padding */
+.gradient-border {
+  padding: 8px; /* Space between the gradient border and inner content */
+  border-radius: 8px; /* Match inner content’s rounded corners */
+}
+
+/* Form Placeholder Styling */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Lighten placeholder for visibility */
+  font-style: italic;
+}
+
+/* Hover Effects for Form Fields */
+input:focus,
+textarea:focus {
+  border-color: var(--primary); /* Highlight field on focus */
+  box-shadow: 0 0 4px var(--primary);
+}
+
+/* Button Enhancements */
+button:hover {
+  background-color: var(--accent);
+  transform: scale(1.02);
+}
+
+/* Increase spacing between sections */
+.section-spacing {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }

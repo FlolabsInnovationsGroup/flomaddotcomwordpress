@@ -43,75 +43,91 @@ export default function Home() {
 
 
 
-      {/* Hero Section */}
-      <section
-        id="home"
-        className="flex items-center justify-center h-screen bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/images/futuristicbackground.png')" }}
-      >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 text-center max-w-3xl p-6 bg-white/90 dark:bg-black/90 rounded-lg shadow-lg">
-          <h2 className="text-4xl sm:text-5xl font-medium mb-4 text-[#3AB6EC] leading-snug">
-            Flomad Labs: Navigating the AI Revolution Together
-          </h2>
-          <p className="text-lg sm:text-xl mb-6 text-gray-800 dark:text-gray-200">
-            We are at the start of another productivity revolution – Generative
-            AI. Unlock the infinite potential of Artificial Intelligence.
-          </p>
-          <a
-            href="#about"
-            className="inline-block bg-[#3AB6EC] text-white py-3 px-6 rounded-md hover:bg-blue-600 transition-transform transform hover:scale-105"
-          >
-            Learn More
-          </a>
-        </div>
-      </section>
+{/* Hero Section */}
+<section
+  id="home"
+  className="flex items-center justify-center h-screen bg-cover bg-center relative"
+  style={{ backgroundImage: "url('/images/futuristicbackground.png')" }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/50"></div>
 
-      {/* Guardians of Tomorrow Section */}
-      <section
-        id="guardians"
-        className="p-8 bg-background text-foreground transition-colors duration-300"
+  {/* Content Container with Gradient Border */}
+  <div className="relative z-10 p-[2px] rounded-lg bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] shadow-lg">
+    <div className="text-center max-w-3xl p-6 bg-white/90 dark:bg-black/90 rounded-lg">
+      <h2 className="text-4xl sm:text-5xl font-medium mb-4 text-[#3AB6EC] leading-snug">
+        Flomad Labs: Navigating the AI Revolution Together
+      </h2>
+      <p className="text-lg sm:text-xl mb-6 text-gray-800 dark:text-gray-200">
+        We are at the start of another productivity revolution – Generative
+        AI. Unlock the infinite potential of Artificial Intelligence.
+      </p>
+      {/* Updated Learn More Button */}
+      <a
+        href="/about"
+        className="inline-block py-3 px-6 bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] text-white font-semibold rounded-lg shadow-md hover:opacity-90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300"
       >
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-medium text-[#3AB6EC] mb-8">
-            Guardians of Tomorrow: How Flomad Labs Resurrects the Spirit of Talos
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
-            <div>
-              <Image
-                src="/images/talos.png"
-                alt="Mythical Guardian Talos"
-                width={500}
-                height={500}
-                className="rounded-lg mx-auto shadow-lg"
-                priority
-              />
-            </div>
-            <div>
-              <p className="mb-6 leading-relaxed">
-                In ancient times, the island of Crete was watched over by a mighty
-                guardian: Talos, the first robot known to mythology. A towering figure
-                of bronze, Talos tirelessly patrolled the island, running its perimeter
-                three times a day to protect its people from invaders.
-              </p>
-              <p className="mb-6 leading-relaxed">
-                Thousands of years later, Flomad Labs carries on this spirit of ancient
-                innovation with modern technology. Just as Talos stood as a guardian
-                for Crete, Flomad&#39;s AI solutions stand guard over the digital and
-                physical landscapes of our modern world.
-              </p>
-              <a
-                href="https://caipo.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-transform transform hover:scale-105"
-              >
-                Learn More About CAIPO
-              </a>
-            </div>
-          </div>
+        Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+{/* Guardians of Tomorrow Section */}
+<section
+  id="guardians"
+  className="p-8 bg-background text-foreground transition-colors duration-300"
+>
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-4xl sm:text-5xl font-medium text-[#3AB6EC] mb-8">
+      Guardians of Tomorrow: How Flomad Labs Resurrects the Spirit of Talos
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
+      {/* Image with Subtle Gradient Border */}
+      <div className="p-[2px] rounded-lg bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] shadow-md mx-auto">
+        <div className="bg-black rounded-lg">
+          <Image
+            src="/images/talos.png"
+            alt="Mythical Guardian Talos"
+            width={500}
+            height={500}
+            className="rounded-lg"
+            priority
+          />
         </div>
-      </section>
+      </div>
+
+      {/* Text Section */}
+      <div>
+        <p className="mb-6 leading-relaxed">
+          In ancient times, the island of Crete was watched over by a mighty
+          guardian: Talos, the first robot known to mythology. A towering figure
+          of bronze, Talos tirelessly patrolled the island, running its perimeter
+          three times a day to protect its people from invaders.
+        </p>
+        <p className="mb-6 leading-relaxed">
+          Thousands of years later, Flomad Labs carries on this spirit of ancient
+          innovation with modern technology. Just as Talos stood as a guardian
+          for Crete, Flomad's AI solutions stand guard over the digital and
+          physical landscapes of our modern world.
+        </p>
+        <a
+  href="https://caipo.ai"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block px-6 py-3 rounded-md font-semibold text-white bg-transparent border-[2px] border-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] hover:text-black hover:bg-gradient-to-r hover:from-[#2563eb] hover:via-[#3b82f6] hover:to-[#1e3a8a] transition-all duration-300"
+>
+  Learn More About CAIPO
+</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* The Flomad Advantage Section */}
       <section
@@ -187,54 +203,57 @@ export default function Home() {
 
 
 
-      {/* Collaborations Section */}
-      <section
-        id="collaborations"
-        className="p-8 bg-white dark:bg-black text-gray-800 dark:text-gray-200 transition-colors duration-300"
-        aria-labelledby="collaborations-heading"
+{/* Collaborations Section */}
+<section
+  id="collaborations"
+  className="p-8 bg-white dark:bg-black text-gray-800 dark:text-gray-200 transition-colors duration-300"
+  aria-labelledby="collaborations-heading"
+>
+  <h2
+    id="collaborations-heading"
+    className="text-3xl sm:text-4xl font-medium mb-6 text-center text-[#3AB6EC]"
+  >
+    Collaborations
+  </h2>
+  <p className="text-center mb-8 text-lg max-w-3xl mx-auto">
+    We thrive on collaboration. Whether it&#39;s academic research, corporate
+    initiatives, or community-driven projects, we bring AI innovations to life.
+  </p>
+  <div className="flex flex-wrap justify-center items-center gap-8">
+    {[
+      {
+        src: "/images/onlinecollab.png",
+        alt: "Online Collaboration",
+        caption: "Partner with Flomad Labs to bring cutting-edge AI solutions to life.",
+      },
+      {
+        src: "/images/aiadvantage.png",
+        alt: "AI Collaboration",
+        caption: "Join our community of innovators to lead the AI revolution together.",
+      },
+    ].map((collab, index) => (
+      <div
+        key={index}
+        className="group relative p-[2px] rounded-lg bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] shadow-lg hover:shadow-xl transition-all duration-300"
       >
-        <h2
-          id="collaborations-heading"
-          className="text-3xl sm:text-4xl font-medium mb-6 text-center text-[#3AB6EC]"
-        >
-          Collaborations
-        </h2>
-        <p className="text-center mb-8 text-lg max-w-3xl mx-auto">
-          We thrive on collaboration. Whether it&#39;s academic research, corporate
-          initiatives, or community-driven projects, we bring AI innovations to life.
-        </p>
-        <div className="bg-white dark:bg-black/90 p-6 rounded-lg border border-gray-200 dark:border-gray-800 transition-all duration-300">
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {[
-              {
-                src: "/images/onlinecollab.png",
-                alt: "Online Collaboration",
-                caption: "Partner with Flomad Labs to bring cutting-edge AI solutions to life.",
-              },
-              {
-                src: "/images/aiadvantage.png",
-                alt: "AI Collaboration",
-                caption: "Join our community of innovators to lead the AI revolution together.",
-              },
-            ].map((collab, index) => (
-              <div
-                key={index}
-                className="group relative w-[350px] h-[250px] overflow-hidden rounded-lg shadow-lg bg-black/90 hover:shadow-xl"
-              >
-                <Image
-                  src={collab.src}
-                  alt={collab.alt}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <p className="text-center text-white text-lg px-4">{collab.caption}</p>
-                </div>
-              </div>
-            ))}
+        <div className="bg-white dark:bg-black/90 rounded-lg overflow-hidden">
+          <Image
+            src={collab.src}
+            alt={collab.alt}
+            width={350} // Explicit width
+            height={250} // Explicit height
+            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <p className="text-center text-white text-lg px-4">{collab.caption}</p>
           </div>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
+
+
     </>
   );
 }
