@@ -4,46 +4,44 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      {/* Flomad Hero Section */}
-      <section className="relative h-[60vh] overflow-hidden bg-black">
-        <div
-          className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+{/* Flomad Hero Section */}
+<section className="relative h-[60vh] overflow-hidden bg-black">
+  <div
+    className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+    style={{
+      backgroundImage: "url('/images/starspic.png')",
+    }}
+  ></div>
+  <div
+    className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black"
+    aria-hidden="true"
+  ></div>
+  <div className="absolute top-0 left-0 w-full h-full bg-black/60 flex flex-col items-center justify-center text-white p-4">
+    {/* Beehiv Embed Section */}
+    <div className="p-[4px] rounded-lg bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] max-w-2xl w-full shadow-lg">
+      <div className="bg-black p-6 rounded-lg text-center">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-[#3AB6EC]">
+          Join the Flomad Labs Movement
+        </h1>
+        <iframe
+          src="https://embeds.beehiiv.com/53c7ac00-2964-4f87-ba7d-c7b87146ad90"
+          data-test-id="beehiiv-embed"
+          width="100%"
+          height="240"
+          frameBorder="0"
+          scrolling="no"
           style={{
-            backgroundImage: "url('/images/starspic.png')",
+            borderRadius: "8px",
+            border: "none",
+            backgroundColor: "transparent",
           }}
-        ></div>
-        <div
-          className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black"
-          aria-hidden="true"
-        ></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-black/60 flex flex-col items-center justify-center text-white p-4">
-          <div className="bg-black p-8 rounded-lg shadow-lg border border-gray-700 max-w-xl text-center">
-            <h1 className="text-4xl font-bold mb-4 text-[#3AB6EC]">
-              Join the Flomad Labs Movement
-            </h1>
-            <p className="text-lg mb-4">
-              Get your AI dose of innovation and inspiration. Our newsletter is
-              your go-to source for staying in sync with the AI universe.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-4 w-full">
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                className="flex-1 p-3 rounded-md border border-gray-300 text-gray-200 bg-gray-800 dark:border-gray-700"
-                required
-                aria-label="Enter your email"
-              />
-              <button
-                type="submit"
-                className="bg-[#3AB6EC] text-white px-6 py-3 rounded-md hover:bg-blue-600 transition-transform transform hover:scale-105"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Hero Section */}
       <section
