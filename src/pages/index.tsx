@@ -6,19 +6,24 @@ export default function Home() {
     <>
 {/* Flomad Hero Section */}
 <section className="relative h-[60vh] overflow-hidden bg-black">
+  {/* Background Image */}
   <div
     className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
     style={{
       backgroundImage: "url('/images/starspic.png')",
     }}
   ></div>
+
+  {/* Gradient Overlay */}
   <div
     className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black"
     aria-hidden="true"
   ></div>
+
+  {/* Content Section */}
   <div className="absolute top-0 left-0 w-full h-full bg-black/60 flex flex-col items-center justify-center text-white p-4">
     {/* Beehiv Embed Section */}
-    <div className="p-[4px] rounded-lg bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] max-w-2xl w-full shadow-lg">
+    <div className="p-[2px] rounded-lg bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] max-w-2xl w-full shadow-lg">
       <div className="bg-black p-6 rounded-lg text-center">
         <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-[#3AB6EC]">
           Join the Flomad Labs Movement
@@ -43,6 +48,7 @@ export default function Home() {
 
 
 
+
 {/* Hero Section */}
 <section
   id="home"
@@ -59,16 +65,15 @@ export default function Home() {
         Flomad Labs: Navigating the AI Revolution Together
       </h2>
       <p className="text-lg sm:text-xl mb-6 text-gray-800 dark:text-gray-200">
-        We are at the start of another productivity revolution – Generative
-        AI. Unlock the infinite potential of Artificial Intelligence.
+        We are at the start of another productivity revolution &ndash; Generative AI. Unlock the infinite potential of Artificial Intelligence.
       </p>
       {/* Updated Learn More Button */}
-      <a
+      <Link
         href="/about"
         className="inline-block py-3 px-6 bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] text-white font-semibold rounded-lg shadow-md hover:opacity-90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300"
       >
         Learn More
-      </a>
+      </Link>
     </div>
   </div>
 </section>
@@ -110,18 +115,17 @@ export default function Home() {
         <p className="mb-6 leading-relaxed">
           Thousands of years later, Flomad Labs carries on this spirit of ancient
           innovation with modern technology. Just as Talos stood as a guardian
-          for Crete, Flomad's AI solutions stand guard over the digital and
+          for Crete, Flomad&apos;s AI solutions stand guard over the digital and
           physical landscapes of our modern world.
         </p>
-        <a
-  href="https://caipo.ai"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-block px-6 py-3 rounded-md font-semibold text-white bg-transparent border-[2px] border-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] hover:text-black hover:bg-gradient-to-r hover:from-[#2563eb] hover:via-[#3b82f6] hover:to-[#1e3a8a] transition-all duration-300"
->
-  Learn More About CAIPO
-</a>
-
+        <Link
+          href="https://caipo.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-3 rounded-md font-semibold text-white bg-transparent border-[2px] border-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] hover:text-black hover:bg-gradient-to-r hover:from-[#2563eb] hover:via-[#3b82f6] hover:to-[#1e3a8a] transition-all duration-300"
+        >
+          Learn More About CAIPO
+        </Link>
       </div>
     </div>
   </div>
@@ -129,8 +133,9 @@ export default function Home() {
 
 
 
-      {/* The Flomad Advantage Section */}
-      <section
+
+     {/* The Flomad Advantage Section */}
+<section
   id="benefits"
   className="p-8 bg-white dark:bg-black text-gray-800 dark:text-gray-200"
   aria-labelledby="benefits-heading"
@@ -155,12 +160,12 @@ export default function Home() {
       {
         title: "Transforming Enterprises",
         description:
-          "Large organizations achieve unprecedented efficiency with Flomad&#39;s AI-driven solutions, enhancing decision-making and optimizing operations.",
+          "Large organizations achieve unprecedented efficiency with Flomad&apos;s AI-driven solutions, enhancing decision-making and optimizing operations.",
       },
       {
         title: "Driving Research",
         description:
-          "Our dedicated research initiatives push the boundaries of AI, uncovering innovative solutions for today&#39;s most complex challenges.",
+          "Our dedicated research initiatives push the boundaries of AI, uncovering innovative solutions for today&apos;s most complex challenges.",
       },
       {
         title: "Personalized Solutions",
@@ -202,7 +207,6 @@ export default function Home() {
 
 
 
-
 {/* Collaborations Section */}
 <section
   id="collaborations"
@@ -216,7 +220,7 @@ export default function Home() {
     Collaborations
   </h2>
   <p className="text-center mb-8 text-lg max-w-3xl mx-auto">
-    We thrive on collaboration. Whether it&#39;s academic research, corporate
+    We thrive on collaboration. Whether it&apos;s academic research, corporate
     initiatives, or community-driven projects, we bring AI innovations to life.
   </p>
   <div className="flex flex-wrap justify-center items-center gap-8">
@@ -252,6 +256,7 @@ export default function Home() {
     ))}
   </div>
 </section>
+
 
 
     </>
