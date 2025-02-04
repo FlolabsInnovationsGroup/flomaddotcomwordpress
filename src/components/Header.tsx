@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,6 +17,8 @@ const Header = () => {
     }
     return false;
   });
+
+  const router = useRouter(); // To get the current route
 
   const toggleDarkMode = () => {
     const htmlElement = document.documentElement;
@@ -48,16 +51,25 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden sm:flex gap-6">
-          {["Home", "About", "Services", "Contact", "Careers"].map((item) => (
-            <li key={item}>
-              <Link
-                href={`/${item.toLowerCase()}`}
-                className="text-lg hover:text-blue-400 transition-all duration-300"
-              >
-                {item}
-              </Link>
-            </li>
-          ))}
+          {["Home", "About", "Services", "Contact", "Careers"].map((item) => {
+            const linkPath = `/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`;
+            return (
+              <li key={item}>
+                {router.pathname === linkPath ? (
+                  <span className="text-lg text-blue-400 font-semibold">
+                    {item}
+                  </span>
+                ) : (
+                  <Link
+                    href={linkPath}
+                    className="text-lg hover:text-blue-400 transition-all duration-300"
+                  >
+                    {item}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
         </ul>
 
         {/* Dark Mode Toggle */}
@@ -87,17 +99,26 @@ const Header = () => {
           className="sm:hidden bg-background text-foreground p-4 absolute w-full top-full left-0 z-40 shadow-lg transition-all duration-300"
         >
           <ul className="flex flex-col gap-4">
-            {["Home", "About", "Services", "Contact", "Careers"].map((item) => (
-              <li key={item}>
-                <Link
-                  href={`/${item.toLowerCase()}`}
-                  className="text-lg hover:text-blue-400 transition-all duration-300"
-                  onClick={closeMenu}
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
+            {["Home", "About", "Services", "Contact", "Careers"].map((item) => {
+              const linkPath = `/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`;
+              return (
+                <li key={item}>
+                  {router.pathname === linkPath ? (
+                    <span className="text-lg text-blue-400 font-semibold">
+                      {item}
+                    </span>
+                  ) : (
+                    <Link
+                      href={linkPath}
+                      className="text-lg hover:text-blue-400 transition-all duration-300"
+                      onClick={closeMenu}
+                    >
+                      {item}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </nav>
       )}
