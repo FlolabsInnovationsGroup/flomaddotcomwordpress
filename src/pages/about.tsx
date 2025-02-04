@@ -9,39 +9,39 @@ export default function About() {
     <>
       {/* Hero Section */}
       <section id="about" className="relative p-8 bg-black text-white">
-  {/* Background Video with Fallback */}
-  <div className="absolute inset-0">
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="absolute inset-0 w-full h-full object-cover z-0"
-    >
-      <source src="/videos/movingaielementsvid.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <img
-      src="/images/video-fallback.jpg"
-      alt="Fallback Background"
-      className="absolute inset-0 w-full h-full object-cover z-0"
-    />
-  </div>
+        {/* Background Video with Fallback */}
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          >
+            <source src="/videos/movingaielementsvid.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <Image
+            src="/images/video-fallback.jpg"
+            alt="Fallback Background"
+            fill
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
+        </div>
 
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/70 z-10"></div>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
 
-  {/* Hero Content */}
-  <div className="relative z-20 max-w-6xl mx-auto text-center text-white px-4 border border-primary rounded-lg p-6">
-    <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
-      About Flomad
-    </h1>
-    <p className="text-lg sm:text-xl mb-8">
-      Shaping the future through AI innovation, travel solutions, and global connectivity.
-    </p>
-  </div>
-</section>
-
+        {/* Hero Content */}
+        <div className="relative z-20 max-w-6xl mx-auto text-center text-white px-4 border border-primary rounded-lg p-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
+            About Flomad
+          </h1>
+          <p className="text-lg sm:text-xl mb-8">
+            Shaping the future through AI innovation, travel solutions, and global connectivity.
+          </p>
+        </div>
+      </section>
 
       {/* Who We Are */}
       <section className="relative p-8 bg-white dark:bg-black text-foreground transition-colors duration-300">
@@ -55,98 +55,91 @@ export default function About() {
 
           {/* Core Values */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-  {[
-    {
-      title: "Innovation",
-      description: "Driving creative solutions to transform challenges into opportunities.",
-    },
-    {
-      title: "Global Impact",
-      description: "Connecting people, businesses, and cultures through technology and travel.",
-    },
-    {
-      title: "Exploration",
-      description: "Empowering global travelers with cutting-edge solutions.",
-    },
-    {
-      title: "Collaboration",
-      description: "Building partnerships to push the boundaries of innovation.",
-    },
-  ].map((value, index) => (
-    <div
-      key={index}
-      className="flex flex-col items-center text-center bg-white dark:bg-black/90 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800 transition-transform transform hover:scale-105 duration-300 h-60"
-      title={value.description}
-    >
-      <h3 className="text-lg font-medium">{value.title}</h3>
-      <p className="text-sm text-gray-700 dark:text-gray-300 mt-2">
-        {value.description}
-      </p>
-    </div>
-  ))}
-</div>
-</div>
+            {[
+              {
+                title: "Innovation",
+                description: "Driving creative solutions to transform challenges into opportunities.",
+              },
+              {
+                title: "Global Impact",
+                description: "Connecting people, businesses, and cultures through technology and travel.",
+              },
+              {
+                title: "Exploration",
+                description: "Empowering global travelers with cutting-edge solutions.",
+              },
+              {
+                title: "Collaboration",
+                description: "Building partnerships to push the boundaries of innovation.",
+              },
+            ].map((value, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center bg-white dark:bg-black/90 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800 transition-transform transform hover:scale-105 duration-300 h-60"
+                title={value.description}
+              >
+                <h3 className="text-lg font-medium">{value.title}</h3>
+                <p className="text-sm text-gray-700 dark:text-gray-300 mt-2">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Ecosystem of Flomad */}
       <section className="p-8 bg-black text-foreground transition-colors duration-300">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-4xl sm:text-5xl font-semibold text-center text-primary mb-8">
-      The Flomad Ecosystem
-    </h2>
-    <p className="text-lg text-center mb-6">
-      At Flomad, we operate as an interconnected network of innovative businesses and solutions:
-    </p>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-  {[
-    {
-      title: "Flomad Labs",
-      description:
-        "Our hub for AI research and development, creating transformative solutions for modern challenges.",
-      link: "https://www.flomadlabs.com/",
-    },
-    {
-      title: "Flomad Travel",
-      description:
-        "Simplifying global exploration with advanced travel tools and services.",
-      link: "https://www.flomadtravel.com/",
-    },
-    {
-      title: "Flomad International",
-      description:
-        "Facilitating partnerships and global initiatives to foster innovation.",
-      link: "https://flomad.international/",
-    },
-    {
-      title: "CAIPO",
-      description:
-        "Our flagship AI platform, streamlining business processes and enhancing productivity.",
-      link: "https://www.caipo.ai/",
-    },
-  ].map((item, index) => (
-    <div
-      key={index}
-      className="relative rounded-lg p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300"
-    >
-      <a
-        href={item.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block bg-black dark:bg-black/90 text-center rounded-lg shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 h-56 flex flex-col justify-center items-center p-4"
-        aria-label={`Visit ${item.title} website`}
-      >
-        <h3 className="text-xl font-semibold text-primary">{item.title}</h3>
-        <p className="text-sm text-gray-400 mt-2">{item.description}</p>
-      </a>
-    </div>
-  ))}
-</div>
-
-  </div>
-</section>
-
-
-
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-center text-primary mb-8">
+            The Flomad Ecosystem
+          </h2>
+          <p className="text-lg text-center mb-6">
+            At Flomad, we operate as an interconnected network of innovative businesses and solutions:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                title: "Flomad Labs",
+                description: "Our hub for AI research and development, creating transformative solutions for modern challenges.",
+                link: "https://www.flomadlabs.com/",
+              },
+              {
+                title: "Flomad Travel",
+                description: "Simplifying global exploration with advanced travel tools and services.",
+                link: "https://www.flomadtravel.com/",
+              },
+              {
+                title: "Flomad International",
+                description: "Facilitating partnerships and global initiatives to foster innovation.",
+                link: "https://flomad.international/",
+              },
+              {
+                title: "CAIPO",
+                description: "Our flagship AI platform, streamlining business processes and enhancing productivity.",
+                link: "https://www.caipo.ai/",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="relative rounded-lg p-[2px] bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] hover:shadow-lg transition-all duration-300"
+              >
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${item.title} website`}
+                >
+                  <div className="block bg-black dark:bg-black/90 text-center rounded-lg shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 h-56 flex flex-col justify-center items-center p-4">
+                    <h3 className="text-xl font-semibold text-primary">{item.title}</h3>
+                    <p className="text-sm text-gray-400 mt-2">{item.description}</p>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Vision for the Future */}
       <section className="p-8 bg-white dark:bg-black text-foreground transition-colors duration-300">
@@ -164,10 +157,7 @@ export default function About() {
       </section>
 
       {/* Founder Section */}
-      <section
-        id="john-hazlewood"
-        className="p-8 bg-background text-foreground transition-colors duration-300"
-      >
+      <section id="john-hazlewood" className="p-8 bg-background text-foreground transition-colors duration-300">
         <h2 className="text-4xl sm:text-5xl font-semibold text-center text-primary mb-8">
           Flomad&#39;s Founder
         </h2>
@@ -183,14 +173,14 @@ export default function About() {
           <h3 className="text-3xl font-bold mb-2 text-primary">John Hazlewood</h3>
           <p className="text-gray-400 font-semibold mb-4">CEO & Founder</p>
           <Link
-  href="https://linkedin.com"
-  target="_blank"
-  className="text-primary hover:text-blue-500 text-xl flex items-center justify-center gap-2 mb-6"
-  aria-label="Visit John Hazlewood's LinkedIn profile"
->
-  <FontAwesomeIcon icon={faLinkedin} className="hover:scale-110 transition-transform duration-200" />
-  <span>LinkedIn</span>
-</Link>
+            href="https://linkedin.com"
+            target="_blank"
+            className="text-primary hover:text-blue-500 text-xl flex items-center justify-center gap-2 mb-6"
+            aria-label="Visit John Hazlewood's LinkedIn profile"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="hover:scale-110 transition-transform duration-200" />
+            <span>LinkedIn</span>
+          </Link>
 
           <div className="text-left text-gray-300 space-y-4">
             <h4 className="text-2xl text-primary mb-2">Early Achievements</h4>

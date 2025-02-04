@@ -17,7 +17,7 @@ export default function Contact() {
         method: "POST",
         body: formData,
       });
-
+    
       if (response.ok) {
         setStatus("success");
         event.currentTarget.reset();
@@ -25,10 +25,12 @@ export default function Contact() {
         throw new Error("Failed to submit form");
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       setStatus("error");
     } finally {
       setLoading(false);
     }
+    
   };
 
   return (
