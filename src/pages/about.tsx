@@ -9,24 +9,31 @@ export default function About() {
     <>
       {/* Hero Section */}
       <section id="about" className="relative p-8 bg-black text-white">
-        {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        >
-          <source src="/videos/movingaielementsvid.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {/* Background Video with Fallback */}
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          >
+            <source src="/videos/movingaielementsvid.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <img
+            src="/images/video-fallback.jpg"
+            alt="Fallback Background"
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
+        </div>
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/70 z-10"></div>
 
         {/* Hero Content */}
         <div className="relative z-20 max-w-6xl mx-auto text-center text-white px-4">
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#3AB6EC] mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
             About Flomad
           </h1>
           <p className="text-lg sm:text-xl mb-8">
@@ -36,9 +43,9 @@ export default function About() {
       </section>
 
       {/* Who We Are */}
-      <section className="relative p-8 bg-white dark:bg-black text-gray-800 dark:text-gray-200 transition-colors duration-300">
+      <section className="relative p-8 bg-white dark:bg-black text-foreground transition-colors duration-300">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-center text-[#3AB6EC] mb-8">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-center text-primary mb-8">
             Who We Are
           </h2>
           <p className="text-lg text-center mb-6">
@@ -51,31 +58,25 @@ export default function About() {
               {
                 title: "Innovation",
                 description: "Driving creative solutions to transform challenges into opportunities.",
-                icon: "brain",
-                alt: "Flomad Labs",
               },
               {
                 title: "Global Impact",
                 description: "Connecting people, businesses, and cultures through technology and travel.",
-                icon: "globe",
               },
               {
                 title: "Exploration",
                 description: "Empowering global travelers with cutting-edge solutions.",
-                icon: "plane",
               },
               {
                 title: "Collaboration",
                 description: "Building partnerships to push the boundaries of innovation.",
-                icon: "users",
               },
             ].map((value, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center text-center bg-white dark:bg-black/90 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-300"
+                className="flex flex-col items-center text-center bg-white dark:bg-black/90 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800 transition-all duration-300"
                 title={value.description}
               >
-                <i className={`fas fa-${value.icon} text-5xl text-[#3AB6EC] mb-4`}></i>
                 <h3 className="text-lg font-medium">{value.title}</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300 mt-2">{value.description}</p>
               </div>
@@ -85,15 +86,15 @@ export default function About() {
       </section>
 
       {/* Ecosystem of Flomad */}
-      <section className="p-8 bg-white dark:bg-black text-gray-800 dark:text-gray-200 transition-colors duration-300">
+      <section className="p-8 bg-black text-foreground transition-colors duration-300">
   <div className="max-w-6xl mx-auto">
-    <h2 className="text-4xl sm:text-5xl font-semibold text-center text-[#3AB6EC] mb-8">
+    <h2 className="text-4xl sm:text-5xl font-semibold text-center text-primary mb-8">
       The Flomad Ecosystem
     </h2>
     <p className="text-lg text-center mb-6">
       At Flomad, we operate as an interconnected network of innovative businesses and solutions:
     </p>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {[
         {
           title: "Flomad Labs",
@@ -120,29 +121,33 @@ export default function About() {
           link: "https://www.caipo.ai/",
         },
       ].map((item, index) => (
-        <a
+        <div
           key={index}
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block text-center p-4 bg-white dark:bg-black/90 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800 hover:shadow-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
-          aria-label={`Visit ${item.title}`}
+          className="relative rounded-lg p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#1e3a8a] hover:via-[#2563eb] hover:to-[#3b82f6] transition-all duration-300"
         >
-          <h3 className="text-xl font-semibold text-[#3AB6EC]">{item.title}</h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300 mt-2">
-            {item.description}
-          </p>
-        </a>
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-black dark:bg-black/90 text-center rounded-lg shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 h-56 flex flex-col justify-center items-center p-4"
+            aria-label={`Visit ${item.title}`}
+          >
+            <h3 className="text-xl font-semibold text-primary">{item.title}</h3>
+            <p className="text-sm text-gray-400 mt-2">{item.description}</p>
+          </a>
+        </div>
       ))}
     </div>
   </div>
 </section>
 
 
+
+
       {/* Vision for the Future */}
-      <section className="p-8 bg-white dark:bg-black text-gray-800 dark:text-gray-200 transition-colors duration-300">
+      <section className="p-8 bg-white dark:bg-black text-foreground transition-colors duration-300">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-semibold text-[#3AB6EC] mb-8">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-primary mb-8">
             Our Vision for the Future
           </h2>
           <p className="text-lg mb-6">
@@ -154,13 +159,12 @@ export default function About() {
         </div>
       </section>
 
-      {/* John Section */}
+      {/* Founder Section */}
       <section
         id="john-hazlewood"
         className="p-8 bg-background text-foreground transition-colors duration-300"
-        aria-labelledby="john-hazlewood-heading"
       >
-        <h2 className="text-4xl sm:text-5xl font-semibold text-center text-[#3AB6EC] mb-8">
+        <h2 className="text-4xl sm:text-5xl font-semibold text-center text-primary mb-8">
           Flomad&#39;s Founder
         </h2>
         <div className="max-w-4xl mx-auto text-center">
@@ -169,34 +173,36 @@ export default function About() {
             alt="John Hazlewood"
             width={300}
             height={300}
-            className="mx-auto mb-4 border-4 border-[#3AB6EC] shadow-lg"
+            className="mx-auto mb-4 border-4 border-primary shadow-lg"
             priority
           />
-          <h3
-            id="john-hazlewood-heading"
-            className="text-3xl font-bold mb-2 text-[#3AB6EC]"
-          >
-            John Hazlewood
-          </h3>
+          <h3 className="text-3xl font-bold mb-2 text-primary">John Hazlewood</h3>
           <p className="text-gray-400 font-semibold mb-4">CEO & Founder</p>
           <Link
             href="https://linkedin.com"
             target="_blank"
-            className="text-[#3AB6EC] hover:text-blue-500 text-xl flex items-center justify-center gap-2 mb-6"
+            className="text-primary hover:text-blue-500 text-xl flex items-center justify-center gap-2 mb-6"
             aria-label="Visit John Hazlewood&#39;s LinkedIn profile"
           >
             <FontAwesomeIcon icon={faLinkedin} />
             <span>LinkedIn</span>
           </Link>
           <div className="text-left text-gray-300 space-y-4">
-            <h4 className="text-2xl text-[#3AB6EC] mb-2">Early Achievements</h4>
+            <h4 className="text-2xl text-primary mb-2">Early Achievements</h4>
             <p>
               Launched the first web-based flights reservation system in 1995. Founded an online travel company and its low-cost development subsidiary in Sofia, Bulgaria.
             </p>
-            <h4 className="text-2xl text-[#3AB6EC] mb-2">Business Ventures</h4>
+            <h4 className="text-2xl text-primary mb-2">Business Ventures</h4>
             <p>
               In 1998, started a Y2K Services and IT staffing initiative and grew the company to more than 100 employees. Owned and operated several leisure travel agencies, a sports agency representing professional athletes and teams, a semi-pro soccer team, a lawn maintenance and landscaping company, and an import-export business.
             </p>
-            <h4 className="text-2xl text-[#3AB6EC] mb-2">Vision for Flomad Labs</h4>
+            <h4 className="text-2xl text-primary mb-2">Vision for Flomad Labs</h4>
             <p>
-              John Hazlewood continues to innovate at the intersection of technology and business, leading Flomad Labs toward a future powered by ethical AI and groundbreaking innovation. </p> </div> </div> </section> </> ); }
+              John Hazlewood continues to innovate at the intersection of technology and business, leading Flomad Labs toward a future powered by ethical AI and groundbreaking innovation.
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

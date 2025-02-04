@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default function Services() {
   return (
     <>
@@ -67,31 +66,28 @@ export default function Services() {
             ].map((service, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-black/90 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800 group hover:scale-105 transition-all duration-300"
-                role="article"
-                aria-labelledby={`service-title-${index}`}
+                className="relative group p-[4px] bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] rounded-lg hover:shadow-lg transition-all duration-300"
               >
-                <h3
-                  id={`service-title-${index}`}
-                  className="text-xl font-semibold mb-4 text-[#3AB6EC] text-center"
+                <div
+                  className="bg-white dark:bg-black/90 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800 h-full flex flex-col justify-center"
+                  role="article"
+                  aria-labelledby={`service-title-${index}`}
                 >
-                  {service.title}
-                </h3>
-                <p className="text-gray-700 dark:text-gray-300 text-center">
-                  {service.description}
-                </p>
-                <a
-                  href={`/services/${service.title.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="block text-center text-[#3AB6EC] underline hover:text-blue-400 transition-colors mt-4"
-                  aria-label={`Learn more about ${service.title}`}
-                >
-                  Learn More
-                </a>
+                  <h3
+                    id={`service-title-${index}`}
+                    className="text-xl font-semibold mb-4 text-[#3AB6EC] text-center"
+                  >
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 text-center">
+                    {service.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-      </>
+    </>
   );
 }

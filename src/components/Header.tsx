@@ -30,54 +30,46 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-background text-foreground sticky top-0 z-50">
+    <header className="bg-background text-foreground sticky top-0 z-50 shadow-md">
       <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
+        {/* Logo */}
         <Link href="/" aria-label="Navigate to Home">
-          <Image
-            src="/images/flomadlogo.png"
-            alt="Flomad Labs Logo"
-            width={60}
-            height={40}
-            priority
-          />Flomad
+          <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-200">
+            <Image
+              src="/images/flomadlogo.png"
+              alt="Flomad Labs Logo"
+              width={60}
+              height={40}
+              priority
+            />
+            <span className="text-xl font-bold">Flomad</span>
+          </div>
         </Link>
 
+        {/* Desktop Navigation */}
         <ul className="hidden sm:flex gap-6">
-          <li>
-            <Link href="/" className="hover:text-[#3AB6EC]">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="hover:text-[#3AB6EC]">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/services" className="hover:text-[#3AB6EC]">
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-[#3AB6EC]">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link href="/careers" className="hover:text-[#3AB6EC]">
-              Careers
-            </Link>
-          </li>
+          {["Home", "About", "Services", "Contact", "Careers"].map((item) => (
+            <li key={item}>
+              <Link
+                href={`/${item.toLowerCase()}`}
+                className="text-lg hover:text-blue-400 transition-all duration-300"
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
         </ul>
 
+        {/* Dark Mode Toggle */}
         <button
           onClick={toggleDarkMode}
-          className="ml-4 text-2xl sm:text-lg hover:text-blue-400 transition-transform duration-200"
+          className="ml-4 text-2xl hover:text-blue-400 transition-all duration-300"
           aria-label="Toggle Dark Mode"
         >
           <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
         </button>
 
+        {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="sm:hidden text-foreground text-2xl"
@@ -88,42 +80,24 @@ const Header = () => {
         </button>
       </nav>
 
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <nav
           aria-label="Mobile Menu"
-          className="sm:hidden bg-background text-foreground p-4 absolute w-full top-full left-0 z-40 shadow-lg"
+          className="sm:hidden bg-background text-foreground p-4 absolute w-full top-full left-0 z-40 shadow-lg transition-all duration-300"
         >
           <ul className="flex flex-col gap-4">
-            <li>
-              <Link href="/" className="hover:text-[#3AB6EC]" onClick={closeMenu}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-[#3AB6EC]" onClick={closeMenu}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/understanding-ai" className="hover:text-[#3AB6EC]" onClick={closeMenu}>
-                Understanding AI
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className="hover:text-[#3AB6EC]" onClick={closeMenu}>
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:text-[#3AB6EC]" onClick={closeMenu}>
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link href="/careers" className="hover:text-[#3AB6EC]" onClick={closeMenu}>
-                Careers
-              </Link>
-            </li>
+            {["Home", "About", "Services", "Contact", "Careers"].map((item) => (
+              <li key={item}>
+                <Link
+                  href={`/${item.toLowerCase()}`}
+                  className="text-lg hover:text-blue-400 transition-all duration-300"
+                  onClick={closeMenu}
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       )}
@@ -132,4 +106,3 @@ const Header = () => {
 };
 
 export default Header;
-
