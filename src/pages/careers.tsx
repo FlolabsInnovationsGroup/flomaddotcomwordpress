@@ -67,6 +67,7 @@ const Careers = () => {
                 icon={faGraduationCap}
                 className="text-primary text-3xl mb-4"
               />
+
               <h2 className="text-3xl sm:text-4xl font-medium text-[#3AB6EC] mb-4">
                 Current Open Intern Roles
               </h2>
@@ -83,7 +84,7 @@ const Careers = () => {
                 website to view our current open roles.
               </p>
               <a
-                href="https://flomad.international/internships-programs/"
+                href="https://flomad.international/internships/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-3 bg-gradient-to-r from-[#1e3a8a] via-[#2563eb] to-[#3b82f6] text-white font-semibold rounded-lg shadow-md hover:opacity-90 transition-transform transform hover:scale-105"
