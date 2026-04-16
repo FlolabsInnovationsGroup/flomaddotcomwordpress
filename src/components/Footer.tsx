@@ -21,7 +21,7 @@ const Footer = () => {
         {["Home", "About", "Contact"].map((item) => (
           <li key={item}>
             <Link
-              href={item === "Home"}? "/":`/${item.toLowerCase()}`}
+              href={{item === "Home"}? "/":`/${item.toLowerCase()}`}
               className="text-lg font-medium text-primary hover:text-blue-400 transition-colors duration-300"
               aria-label={`Navigate to ${item}`}
             >
