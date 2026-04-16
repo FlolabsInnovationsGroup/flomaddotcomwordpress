@@ -11,7 +11,7 @@ const Footer = () => {
       className="p-8 bg-background text-foreground transition-colors duration-300 border-t border-gray-800 dark:border-gray-600"
       aria-labelledby="footer-heading"
     >
-      {/* Footer Title (Accessible) */}
+      {/* Footer   Title (Accessible) */}
       <h2 id="footer-heading" className="sr-only">
         Flomad Labs Footer
       </h2>
