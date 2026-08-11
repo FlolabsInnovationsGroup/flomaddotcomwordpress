@@ -1,0 +1,36 @@
+{
+  "default_branch": "master",
+  "branches": [
+    "dependabot/npm_and_yarn/js-yaml-4.3.1",
+    "dependabot/npm_and_yarn/multi-1076b27ac5",
+    "dependabot/npm_and_yarn/multi-4b10dec7ea",
+    "dependabot/npm_and_yarn/multi-5a59400ff4",
+    "dependabot/npm_and_yarn/multi-8e76e33a4d",
+    "dependabot/npm_and_yarn/nanoid-3.3.18",
+    "master",
+    "remove-video",
+    "vercelerrors"
+  ],
+  "parent": {
+    "dependabot/npm_and_yarn/js-yaml-4.3.1": "master",
+    "dependabot/npm_and_yarn/multi-1076b27ac5": "master",
+    "dependabot/npm_and_yarn/multi-4b10dec7ea": "master",
+    "dependabot/npm_and_yarn/multi-5a59400ff4": "master",
+    "dependabot/npm_and_yarn/multi-8e76e33a4d": "master",
+    "dependabot/npm_and_yarn/nanoid-3.3.18": "master",
+    "master": null,
+    "remove-video": "master",
+    "vercelerrors": "master"
+  },
+  "order": [
+    "master",
+    "dependabot/npm_and_yarn/js-yaml-4.3.1",
+    "dependabot/npm_and_yarn/multi-1076b27ac5",
+    "dependabot/npm_and_yarn/multi-4b10dec7ea",
+    "dependabot/npm_and_yarn/multi-5a59400ff4",
+    "dependabot/npm_and_yarn/multi-8e76e33a4d",
+    "dependabot/npm_and_yarn/nanoid-3.3.18",
+    "remove-video",
+    "vercelerrors"
+  ]
+}
